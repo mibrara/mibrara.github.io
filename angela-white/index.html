@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://porn.yamyhub.com/asset/jquery.js"></script>
+    <link rel="stylesheet" href="https://porn.yamyhub.com/asset/style.css">
+    <title class="title-h1"></title>
+    <script>
+        $(document).ready(function(){
+
+            $.ajax({
+                url:"https://get-x.herokuapp.com/index.php?query=angela-white",
+                type:"get",
+                dataType:"json",
+                success:function(data){
+                    $(".title-h1").append(data.page.title);
+                        $.each(data.videoinfo, function(id, val){
+                            $(".container").append('<div class="items" id='+val[1]+'><div class="player player-large player-wrap"><div class="embed-responsive embed-responsive-16by9"><div class="embed-responsive-item add-'+val[1]+'"><img src="https://porn.yamyhub.com/asset/play.svg" class="play-btn" width="70" height="70"></div></div></div></div><h2>'+val[0]+'</h2>');
+        });
+                $(".items").click(function(){
+                id=$(this).attr("id");
+                $(".play-btn").click(function(){
+                    $(this).hide();
+                });
+                $("div.add-"+id).append('<iframe src="https://www.xvideos.com/embedframe/'+id+'" frameborder=0 scrolling=no allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>');
+            });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="https://porn.yamyhub.com/asset/logo.svg">
+        </nav>
+        <hr>
+</header>
+<main>
+    <div class="title">
+        <h1 class="title-h1"></h1>
+    </div>
+    <div class="container">
+    </div>
+</main>
+<footer>
+    <p>Copy text</p>
+</footer>
+</body>
+</html>
