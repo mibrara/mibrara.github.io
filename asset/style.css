@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: monospace;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+}
+header .logo{
+    max-width: 100%;
+    height: auto;
+}
+header hr{
+    margin:10px 50px;
+}
+main div.title{
+    margin-top: 25px;
+    display:flex;
+    justify-content: center;
+}
+h1{
+    font-size: 25px;
+    text-align: center;
+}
+main div.items{
+    margin-top: 25px;
+}
+h2{
+    font-size: 18px;
+    text-align: center;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 35%;
+	padding-top: 25px;
+	height: 0;
+    width: 70%;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+footer{
+    margin-top: 25px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color:white;
+    padding: 25px 0px 10px 0px;
+}
+.player {
+    /* margin-bottom: 25px; */
+  }
+  .player .embed-responsive {
+    z-index: 999;
+    background: #111;
+  }
+  .embed-responsive {
+    position: relative;
+    display: block;
+    width: 70%;
+    padding: 0;
+    margin-left: 15vw;
+    overflow: hidden;
+  }
+  .embed-responsive-16by9::before {
+    padding-top: 56.25%;
+  }
+  .embed-responsive::before {
+    display: block;
+    content: "";
+  }
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive embed,
+  .embed-responsive iframe,
+  .embed-responsive object,
+  .embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  @media(max-width:950px){
+    .embed-responsive {
+        width: 90%;
+        margin-left: 5vw;
+    }
+}
+img.play-btn{
+    margin-left:45%;
+    margin-top: 20%;
+}
+@media (min-width:950px){
+    img.play-btn{
+    margin-top: 25%;
+}
