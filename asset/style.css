@@ -104,6 +104,14 @@ img.play-btn{
     margin-left:45%;
     margin-top: 25%;
 }
+  .lds-spinner {
+    color: ;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-left:42vw;
+  }	
   }
   .lds-spinner {
     color: ;
