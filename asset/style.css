@@ -94,6 +94,9 @@ footer{
         width: 90%;
         margin-left: 5vw;
     }
+.lds-spinner {
+    margin-left:40vw;
+  }
 }
 img.play-btn{
     margin-left:40%;
@@ -103,15 +106,7 @@ img.play-btn{
     img.play-btn{
     margin-left:45%;
     margin-top: 25%;
-}
-  .lds-spinner {
-    color: ;
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin-left:42vw;
-  }	
+}	
   }
   .lds-spinner {
     color: ;
