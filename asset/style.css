@@ -94,19 +94,16 @@ footer{
         width: 90%;
         margin-left: 5vw;
     }
-.lds-spinner {
-    margin-left:35vw;
-  }
 }
 img.play-btn{
-    margin-left:40%;
+    margin-left:30vw;
     margin-top: 17%;
 }
 @media (min-width:950px){
     img.play-btn{
     margin-left:45%;
     margin-top: 25%;
-}	
+}
   }
   .lds-spinner {
     color: ;
@@ -186,3 +183,19 @@ img.play-btn{
     100% {
       opacity: 0;
     }
+  }
+@media (max-width:520px){
+  div.ads{
+    margin-left:20vw;
+}
+}
+@media (max-width:950px) and (min-width:521px){
+  div.ads{
+    margin-left:25vw;
+}
+}
+@media (min-width:951px){
+  div.ads{
+    margin-left:30vw;
+}
+}
