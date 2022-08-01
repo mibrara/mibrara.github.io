@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title class="title-h1"></title>
+    <meta name="title" >
+    <meta name="description">
+    <link rel="canonical" />
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://porn.yamyhub.com/asset/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://porn.yamyhub.com/asset/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://porn.yamyhub.com/asset/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://porn.yamyhub.com/asset/favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://porn.yamyhub.com/asset/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="https://porn.yamyhub.com/asset/logo.svg" alt="yamyhub logo" title="Yamyhub porn videos">
+        </nav>
+        <hr>
+</header>
+<main>
+    <div class="title">
+        <h1 class="title-h1"></h1>
+    </div>
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div class="container">
+    </div>
+
+</main>
+<script src="https://porn.yamyhub.com/asset/jquery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYBMSYDNVG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YYBMSYDNVG');
+</script>
+<script>
+        $(document).ready(function(){
+
+            $.ajax({
+                url:"https://get-x.herokuapp.com/index.php?query=richelle+ryan&cate=",
+                type:"get",
+                dataType:"json",
+                success:function(data){
+                    $(".title-h1").append(data.page.title);
+                    $("meta[name=title]").attr("content", data.page.title);
+                    $("meta[name=description]").attr("content", data.page.description);
+                    $("link[rel=canonical]").attr("href",data.page.url);
+                        $.each(data.videoinfo, function(id, val){
+                            $('.lds-spinner').hide();
+                            $(".container").append('<div class="items" id='+val[1]+'><div class="player player-large player-wrap"><div class="embed-responsive embed-responsive-16by9"><div class="embed-responsive-item add-'+val[1]+'"><img src="https://porn.yamyhub.com/asset/play.svg" class="play-btn" width="70" height="70"></div></div></div></div><h2>'+val[0]+'</h2>');
+        });
+                $(".items").click(function(){
+                id=$(this).attr("id");
+                $(".play-btn").click(function(){
+                    $(this).hide();
+                });
+                $("div.add-"+id).append('<iframe src="https://www.xvideos.com/embedframe/'+id+'" frameborder=0 scrolling=no allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>');
+            });
+            $('#ads-id').after('<footer><p>Copyright 2022 <strong>Yamyhub</strong></p></footer>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
