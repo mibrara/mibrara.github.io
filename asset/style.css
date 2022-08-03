@@ -47,13 +47,43 @@ h2{
 	height: 100%;
 }
 footer{
-    margin-top: 25px;
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color:white;
-    padding: 25px 0px 10px 0px;
+  bottom: 0%;
+  background-color: black;
+  width:100%;
+  margin-top: 20px;
+}
+
+footer div {
+      display: flex;
+      justify-content: center;
+}
+footer ul {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+}
+footer ul li{
+  margin:20px 0px;
+  padding:0px 7vw;
+  list-style: none;
+}
+footer ul li a{
+  color: white;
+  text-decoration: none;
+}
+footer p{
+  margin:20px 0px;
+  color: white;
+}
+footer hr{
+  width:70vw;
+  margin:0vw 15vw;
+}
+@media (max-width:850px){
+  footer ul {
+    flex-direction: column;
+}
 }
 .player {
     /* margin-bottom: 25px; */
@@ -97,23 +127,27 @@ footer{
     }
 }
 img.play-btn{
-    margin-left:20vw;
+    margin-left:40%;
     margin-top: 17%;
+}
+.lds-spinner {
+  color: ;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left:42vw;
 }
 @media (min-width:950px){
     img.play-btn{
     margin-left:45%;
     margin-top: 25%;
 }
+.lds-spinner{
+  margin-left:47vw;
+}
   }
-  .lds-spinner {
-    color: ;
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin-left:47vw;
-  }
+
   .lds-spinner div {
     transform-origin: 40px 40px;
     animation: lds-spinner 1.2s linear infinite;
