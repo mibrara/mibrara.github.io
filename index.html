@@ -17,11 +17,7 @@
     <script src="./asset/jquery.js"></script>
 <script>
     $(document).ready(function(){
-    $.ajax({
-        url:"./data.json",
-        type:"get",
-        dataType:"json",
-        success:function(data){
+        $.getJSON("data.json", function(data){
             $(".title-h1").append(data.page.title);
             $("meta[name=title]").attr("content", data.page.title);
             $("meta[name=description]").attr("content", data.page.description);
@@ -41,9 +37,8 @@ $.each(data.link, function(id, val){
         });
         $("div.add-"+id).append('<iframe src="https://www.xvideos.com/embedframe/'+id+'" frameborder=0 scrolling=no allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>');
     });
-        }
+        });
     });
-});
 </script>
 </head>
 <body>
