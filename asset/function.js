@@ -4,10 +4,6 @@ $(document).ready(function(){
         type:"get",
         dataType:"json",
         success:function(data){
-            $(".title-h1").append(data.page.title);
-            $("meta[name=title]").attr("content", data.page.title);
-            $("meta[name=description]").attr("content", data.page.description);
-            $("link[rel=canonical]").attr("href",data.page.url);
                 $.each(data.videoinfo, function(id, val){
                     $('.lds-spinner').hide();
                     $(".container").append('<div class="items" id='+val[1]+'><div class="player player-large player-wrap"><div class="embed-responsive embed-responsive-16by9"><div class="embed-responsive-item add-'+val[1]+'"><img src="https://porn.yamyhub.com/asset/play.svg" class="play-btn" width="70" height="70"></div></div></div></div><h2>'+val[0]+'</h2>');
